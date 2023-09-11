@@ -1,0 +1,177 @@
+* {
+    background-color: black;
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+
+    --var-right-panel-width: 85%
+}
+
+button {
+    padding: 3px 5px 3px 5px;
+    border: solid thin whitesmoke;
+    height: 40px;
+}
+
+button:hover {
+    background-color: ghostwhite;
+    color: black;
+    border: solid thin ghostwhite;
+}
+
+button:active {
+    background-color: gray;
+    color: black;
+    border: solid thin ghostwhite;
+}
+
+input[type="text"],
+select {
+    height: 40px;
+    padding: 0 6px 0 6px;
+    border: solid thin whitesmoke;
+    min-width: 150px;
+}
+
+p {
+    margin: 10px 0 10px 0;
+}
+
+/* Chat logger */
+[id="chatlog"] {
+    overflow-y: auto;
+    position: absolute;
+    left: 10px;
+    right: calc(100% - var(--var-right-panel-width));
+    top: 0;
+    bottom: 50px;
+}
+
+
+/* Right panel */
+.right_panel {
+    position: fixed;
+    right: 0;
+    top: 10px;
+    bottom: 50px;
+    left: var(--var-right-panel-width);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: solid thin ghostwhite;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.user_panel_title {
+    color: black;
+    background-color: ghostwhite;
+    padding: 3px 3px 3px 20px;
+    margin: 0;
+}
+
+#group_message_button {
+    color: black;
+    background-color: ghostwhite;
+    margin: auto;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    padding: 7px;
+    transform: translate(-50%, -50%);
+    font-size: medium;
+    text-align: center;
+}
+
+[id="member_list"] {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+[id="member_list"]>button {
+    text-align: left;
+    padding: 2px;
+    height: 30px;
+    font-size: smaller;
+}
+
+
+/* Bottom panel */
+.bottom_panel {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+
+    height: 40px;
+    padding-bottom: 5px;
+}
+
+[id="message_input"] {
+    width: 70%;
+}
+
+/* Function hover list */
+/* https://www.w3schools.com/howto/howto_css_dropdown.asp */
+.hover_list_functions {
+    position: absolute;
+    display: none;
+    bottom: 40px;
+}
+
+.hoverable_functions:hover .hover_list_functions {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: space-between;
+
+    animation: fadein;
+    animation-duration: 0.2s;
+}
+
+.hover_list_functions>* {
+    border: solid thin ghostwhite;
+}
+
+.hover_list_functions>*:disabled {
+    display: none;
+}
+
+/* Prompt */
+.prompt {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.prompt > div {
+    display: flex;
+    flex-direction: column;
+    border: solid thin ghostwhite;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+
+    animation: fadein;
+    animation-duration: 0.2s;
+}
+
+/* Animations */
+/* https://www.w3schools.com/css/css3_animations.asp */
+@keyframes fadein {
+    from {opacity: 0}
+    to {opacity: 100}
+}

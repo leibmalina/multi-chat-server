@@ -1,0 +1,14 @@
+{
+  "name": "chatroom",
+  "version": "1.0.0",
+  "description": "a simple chatroom",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js"
+  },
+  "author": "Yunfan Wang, Leib Malina",
+  "license": "",
+  "dependencies": {
+    "socket.io": "4.0.0"
+  }
+}

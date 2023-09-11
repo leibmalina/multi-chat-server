@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="./client.css">
+    <!--suppress HtmlUnknownTarget -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./client.js"></script>
+    <title>Chat Room</title>
+</head>
+<body>
+
+<div id="chatlog"></div>
+
+<div class="right_panel">
+    <p class="user_panel_title">Room members</p>
+    <div id="member_list">
+<!--    Fill buttons here    -->
+    </div>
+    <button id="group_message_button">Group Message</button>
+</div>
+
+<div class="bottom_panel">
+    <div class="hoverable_functions">
+        <button id="function_button">Functions</button>
+        <div class="hover_list_functions">
+            <button id="newroom_button">Create Room</button>
+            <button id="join_button">Join Room</button>
+            <button id="lobby_button">Back to Lobby</button>
+        </div>
+    </div>
+    <label for="message_input"></label><input type="text" id="message_input"
+                                              placeholder="Type something to chat with people (500 characters at most)"
+                                              maxlength="500"/>
+    <button id="send_button">Send</button>
+    <label>
+        <input type="checkbox" checked id="auto_scroll"> Auto Scroll
+    </label>
+</div>
+
+</body>
+</html>
